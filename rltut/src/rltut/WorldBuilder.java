@@ -53,7 +53,7 @@ public class WorldBuilder {
         return this;
     }
 
+    public WorldBuilder makeCaves(){
+        return randomizeTiles().smooth(8);
+    }
 }
-
-
-//The simplest interesting (i.e. randomized) world
