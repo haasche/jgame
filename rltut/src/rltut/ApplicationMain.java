@@ -6,8 +6,9 @@ import rltut.screens.Screen;
 import rltut.screens.StartScreen;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class ApplicationMain extends JFrame{
+public class ApplicationMain extends JFrame implements KeyListener {
     private static final long serialVersionUID = 1060623638149583738L;
 
     private AsciiPanel terminal;
@@ -19,21 +20,31 @@ public class ApplicationMain extends JFrame{
         add(terminal);
         pack();
         screen = new StartScreen();
+        addKeyListener(this);
         repaint();
     }
 
+    @Override
     public void repaint(){
         terminal.clear();
         screen.displayOutput(terminal);
         super.repaint();
     }
 
+    @Override
     public void keyReleased(KeyEvent e){
 
     }
 
+    @Override
     public void keyTyped(KeyEvent e){
 
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        screen = screen.respondToUserInput(e);
+        repaint();
     }
 
     public static void main(String[] args){
