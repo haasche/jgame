@@ -2,7 +2,7 @@ package rltut;
 
 public class FungusAi extends CreatureAi {
 
-    private CreatureFactory factory;
+    private final CreatureFactory factory;
     private int spreadcount;
 
     public FungusAi(Creature creature, CreatureFactory factory){

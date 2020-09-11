@@ -4,6 +4,12 @@ import asciiPanel.AsciiPanel;
 import java.awt.event.KeyEvent;
 
 public interface Screen {
-    public void displayOutput(AsciiPanel terminal);
-    public Screen respondToUserInput(KeyEvent key);
+
+    public default void displayOutput(AsciiPanel terminal) {
+
+    }
+
+    public default Screen respondToUserInput(KeyEvent key) {
+        return null;
+    }
 }

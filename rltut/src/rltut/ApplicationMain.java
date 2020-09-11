@@ -11,7 +11,7 @@ import java.awt.event.KeyListener;
 public class ApplicationMain extends JFrame implements KeyListener {
     private static final long serialVersionUID = 1060623638149583738L;
 
-    private AsciiPanel terminal;
+    private final AsciiPanel terminal;
     private Screen screen;
 
     public ApplicationMain(){

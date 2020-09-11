@@ -4,7 +4,7 @@ import asciiPanel.AsciiPanel;
 
 public class CreatureFactory {
 
-    private World world;
+    private final World world;
 
     public CreatureFactory(World world){
         this.world = world;

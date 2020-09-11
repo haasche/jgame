@@ -4,17 +4,17 @@ import java.awt.Color;
 
 public class Creature {
 
-    private World world;
+    private final World world;
 
     public int x;
     public int y;
 
-    private char glyph;
+    private final char glyph;
     public char glyph(){
         return glyph;
     }
 
-    private Color color;
+    private final Color color;
     public Color color(){
         return color;
     }

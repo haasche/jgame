@@ -6,18 +6,18 @@ import java.util.List;
 
 public class World {
 
-    private Tile[][] tiles;
-    private int width;
+    private final Tile[][] tiles;
+    private final int width;
     public int width(){
         return width;
     }
 
-    private int height;
+    private final int height;
     public int height(){
         return height;
     }
 
-    private List<Creature> creatures;
+    private final List<Creature> creatures;
 
     public World(Tile[][] tiles){
         this.tiles = tiles;
@@ -71,7 +71,7 @@ public class World {
     }
 
     public void update() {
-        List<Creature> toUpdate = new ArrayList<Creature>(creatures);
+        List<Creature> toUpdate = new ArrayList<>(creatures);
         for (Creature creature : toUpdate) {
             creature.update();
         }

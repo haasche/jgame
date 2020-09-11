@@ -10,7 +10,7 @@ import asciiPanel.AsciiPanel;
 public class AppletMain extends Applet implements KeyListener {
     private static final long serialVersionUID = 2560255315130084198L;
 
-    private AsciiPanel terminal;
+    private final AsciiPanel terminal;
     private Screen screen;
 
     public AppletMain(){

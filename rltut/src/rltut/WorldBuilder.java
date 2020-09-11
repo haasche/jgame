@@ -2,8 +2,8 @@ package rltut;
 
 public class WorldBuilder {
 
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
     private Tile[][] tiles;
 
     public WorldBuilder(int width, int height){

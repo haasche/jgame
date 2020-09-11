@@ -9,12 +9,12 @@ public enum Tile {
     WALL((char)177, AsciiPanel.yellow),
     BOUNDS('x', AsciiPanel.brightBlack);
 
-    private char glyph;
+    private final char glyph;
     public char glyph(){
         return glyph;
     }
 
-    private Color color;
+    private final Color color;
     public Color color(){
         return color;
     }
